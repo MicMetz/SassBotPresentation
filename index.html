@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang = "en" >
+
 	<head >
 		<meta charset = "utf-8" >
 		<meta name = "viewport" content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
@@ -8,12 +9,11 @@
 
 		<link rel = "stylesheet" href = "dist/reset.css" >
 		<link rel = "stylesheet" href = "dist/reveal.css" >
-		<!-- <link rel="stylesheet" href="dist/theme/black.css"> -->
-		<!-- <link rel = "stylesheet" href = "dist/theme/black.css" > -->
 		<link rel = "stylesheet" href = "dist/theme/dracula.css" >
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel = "stylesheet" href = "plugin/highlight/monokai.css" >
+
 		<style >
 			.fragment.blur {
 				filter : blur(5px);
@@ -42,10 +42,17 @@
 
 		</style >
 	</head >
+
 	<body >
 		<div class = "reveal" >
+			<div class = "menubar" >
+				<ul class = "menu" ></ul > <!-- Keep this empty -->
+			</div >
 			<div class = "slides" >
-				<section >
+
+
+
+				<section data-name = "Title" >
 					<h2 class = "" style = "color: #e91d63;" >Team Sassy Bot</h2 >
 					<h3 class = "" >CSCI 3832 Final Project</h3 >
 					<img data-src = "assets/sassybot.gif" style = "height: 180px; margin: 0 auto 4rem auto; background: transparent;" />
@@ -53,7 +60,7 @@
 
 				</section >
 
-				<section >
+				<section data-name = "Team" >
 					<h2 class = "" style = "color: #e91d63;" >Team Members:</h2 >
 					<section >
 						<p class = "fragment custom blur;" data-fragment-index = "1" >
@@ -87,7 +94,9 @@
 					</section >
 				</section >
 
-				<section >
+
+
+				<section data-name = "Task" >
 					<div class = "row" >
 						<h2 style = "float: left; top: 0; left: 0;text-decoration: underline; color: #e91d63;" >Task Overview</h2 >
 					</div >
@@ -109,7 +118,9 @@
 					</div >
 				</section >
 
-				<section >
+
+
+				<section data-name = "Plan" >
 					<div class = "row" >
 						<h2 style = "float: left; top: 0; left: 0;text-decoration: underline; color: #e91d63;" >Plan of Action</h2 >
 					</div >
@@ -123,7 +134,9 @@
 					</div >
 				</section >
 
-				<section style = "width: 100%;" >
+
+
+				<section style = "width: 100%;" data-name = "Design" >
 					<div class = "row" >
 						<h2 style = "float: left; top: 0; left: 0;text-decoration: underline; color: #e91d63;" >Code Breakdown</h2 >
 					</div >
@@ -180,7 +193,8 @@
 				</section >
 
 
-				<section data-auto-animate >
+
+				<section data-auto-animate data-name = "Code" >
 					<div class = "row" >
 						<h2 data-id = "code-title" style = "float: left; top: 0; left: 0;text-decoration: underline; color: #e91d63;" >Models</h2 >
 					</div >
@@ -191,7 +205,14 @@
 				</section >
 
 
-				<section >
+
+				<section data-auto-animate data-name = "Test">
+
+				</section>
+
+
+
+				<section data-name = "Evaluation" >
 					<div class = "row" >
 						<h2 style = "float: left; top: 0; left: 0;text-decoration: underline; color: #e91d63;" >Initial Impressions</h2 >
 					</div >
@@ -206,15 +227,24 @@
 				</section >
 
 
+
+
+
 				<section >Slide Chapter 2</section >
+
+
+
 			</div >
 		</div >
+
 
 		<script src = "dist/reveal.js" ></script >
 		<script src = "plugin/notes/notes.js" ></script >
 		<script src = "plugin/markdown/markdown.js" ></script >
 		<script src = "plugin/embed/embed-code.js" ></script >
 		<script src = "plugin/highlight/highlight.js" ></script >
+		<script src = "plugin/simplemenu/simplemenu.js" ></script >
+
 		<script >
 			Reveal.initialize( {
 				hash              : true,
@@ -222,7 +252,19 @@
 				controlsBackArrows: 'faded',
 				progress          : false,
 				center            : true,
-				plugins           : [ RevealMarkdown, EmbedCode, RevealHighlight, RevealNotes ]
+				simplemenu: {
+					menuclass    : "menu",
+					activeclass  : "active",
+					activeelement: "li",
+					selectby     : "id",
+					barhtml      : {
+						header: "<div class='menubar'><ul class='menu'></ul><div>",
+					},
+					flat         : false,
+					scale        : 0.010,
+					csspath      : ""
+				},
+				plugins           : [ RevealMarkdown, EmbedCode, RevealHighlight, RevealNotes, Simplemenu ],
 			} );
 		</script >
 	</body >

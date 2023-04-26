@@ -1,0 +1,289 @@
+:root {
+    --simplemenu-scale : 0.75;
+    --r-main-font-size : 1.5rem;
+}
+
+
+.menubar {
+    -webkit-box-pack   : justify;
+    -webkit-box-sizing : border-box;
+    box-sizing         : border-box;
+    color              : inherit;
+    display            : -webkit-box;
+    display            : -ms-flexbox;
+    display            : flex;
+    -ms-flex-pack      : justify;
+
+    font-size          : clamp(13px, var(--r-main-font-size) * var(--simplemenu-scale, 0.75), 70px);
+    justify-content    : space-between;
+    line-height        : 0.5;
+    position           : absolute;
+    -ms-transform      : translateY(-100%);
+    -webkit-transform  : translateY(-100%);
+    transform          : translateY(-100%);
+    -o-transition      : transform 0.8s cubic-bezier(0.26, 0.86, 0.44, 0.985);
+    -webkit-transition : -webkit-transform 0.8s cubic-bezier(0.26, 0.86, 0.44, 0.985);
+    transition         : -webkit-transform 0.8s cubic-bezier(0.26, 0.86, 0.44, 0.985);
+    transition         : transform 0.8s cubic-bezier(0.26, 0.86, 0.44, 0.985);
+    transition         : transform 0.8s cubic-bezier(0.26, 0.86, 0.44, 0.985), -webkit-transform 0.8s cubic-bezier(0.26, 0.86, 0.44, 0.985);
+    width              : 100%;
+    z-index            : 2;
+}
+
+
+
+
+
+
+.menubar * {
+    -webkit-box-sizing : border-box;
+    box-sizing         : border-box;
+}
+
+
+
+html:not(.print-pdf) body:not(.hide-menubar) .reveal.ready:not(.hide-menubar) .menubar {
+    -ms-transform     : translateY(0);
+    -webkit-transform : translateY(0);
+    transform         : translateY(0);
+}
+
+
+
+body.hide-menubar .reveal.ready .menubar a {
+    -o-transition      : opacity 0.8s cubic-bezier(0.26, 0.86, 0.44, 0.985);
+    -webkit-transition : opacity 0.8s cubic-bezier(0.26, 0.86, 0.44, 0.985);
+    transition         : opacity 0.8s cubic-bezier(0.26, 0.86, 0.44, 0.985);
+}
+
+
+
+.menubar.bottom {
+    -ms-transform     : translateY(100%);
+    -webkit-transform : translateY(100%);
+    transform         : translateY(100%);
+}
+
+
+
+.menubar:before, .menubar:after {
+    border-bottom : 1px solid currentColor;
+    content       : "";
+    left          : 0;
+    opacity       : 0.3;
+    position      : absolute;
+    right         : 0;
+}
+
+
+
+.menubar:before {
+    top : 0;
+}
+
+
+
+.menubar:after {
+    bottom : 0;
+}
+
+
+
+.menubar:before {
+    opacity : 0;
+}
+
+
+
+.menubar.bottom:after {
+    opacity : 0;
+}
+
+
+
+.menubar.bottom:before {
+    opacity : 0.3;
+}
+
+
+
+.print-pdf .pdf-page:not(.hide-menubar) .menubar {
+    -ms-transform     : translateY(0);
+    -webkit-transform : translateY(0);
+    transform         : translateY(0);
+}
+
+
+
+.menubar a {
+    display                 : -webkit-box;
+    display                 : -ms-flexbox;
+    display                 : flex;
+    -webkit-font-smoothing  : subpixel-antialiased;
+    -moz-osx-font-smoothing : grayscale;
+    padding                 : 0.4em 0;
+    -o-transition           : opacity 0.2s ease-in-out;
+    -webkit-transition      : opacity 0.2s ease-in-out;
+    transition              : opacity 0.2s ease-in-out;
+}
+
+
+
+.menubar > ul {
+    align-items           : center;
+    -webkit-box-align     : center;
+    -webkit-box-direction : normal;
+    -webkit-box-orient    : horizontal;
+    -webkit-box-pack      : center;
+    display               : -webkit-box;
+    display               : -ms-flexbox;
+    display               : flex;
+    -ms-flex-align        : center;
+    -ms-flex-direction    : row;
+    flex-direction        : row;
+    -ms-flex-pack         : center;
+    -ms-flex-wrap         : wrap;
+    flex-wrap             : wrap;
+    gap                   : 1.5em;
+    justify-content       : center;
+    list-style-type       : none;
+    margin                : 0 auto;
+    padding               : 0;
+    -o-transition         : opacity 0.8s cubic-bezier(0.26, 0.86, 0.44, 0.985);
+    -webkit-transition    : opacity 0.8s cubic-bezier(0.26, 0.86, 0.44, 0.985);
+    transition            : opacity 0.8s cubic-bezier(0.26, 0.86, 0.44, 0.985);
+}
+
+
+
+.menubar > ul li {
+    -webkit-box-flex   : 1;
+    -webkit-box-sizing : border-box;
+    box-sizing         : border-box;
+    display            : -webkit-box;
+    display            : -ms-flexbox;
+    display            : flex;
+    -ms-flex           : 1;
+    flex               : 1;
+
+}
+
+
+
+.menubar > ul li:before {
+    display : none;
+}
+
+
+
+.menubar > ul li + li {
+    margin : 0;
+}
+
+
+
+.menubar > ul a {
+    align-items       : center;
+    -webkit-box-align : center;
+    -webkit-box-flex  : 0;
+    color             : currentColor;
+    -ms-flex          : 0;
+    flex              : 0;
+    -ms-flex-align    : center;
+    opacity           : 0.33;
+    padding           : 0.5em;
+    white-space       : nowrap;
+}
+
+
+
+.menubar > ul a:hover {
+    color   : currentColor;
+    opacity : 0.75;
+}
+
+
+
+.menubar > ul li a.active, .menubar > ul li.active a {
+    opacity : 1;
+}
+
+
+
+.hide-menu .menu, .hide-menu .menu, [data-state=hide-menu] .menu {
+    opacity : 0;
+}
+
+
+
+.reveal .slide-number, .menubar .slide-number {
+    background  : none;
+    color       : inherit;
+    font-family : inherit;
+}
+
+
+
+.reveal .slide-number a, .menubar .slide-number a {
+    color   : currentColor;
+    opacity : 0.33;
+    padding : 0;
+}
+
+
+
+.reveal .slide-number a:hover, .menubar .slide-number a:hover {
+    color   : currentColor;
+    opacity : 0.75;
+}
+
+
+
+.menubar .slide-number {
+    align-items           : center;
+    bottom                : auto;
+    -webkit-box-align     : center;
+    -webkit-box-direction : normal;
+    -webkit-box-orient    : horizontal;
+    display               : -webkit-box !important;
+    display               : -ms-flexbox !important;
+    display               : flex !important;
+    -ms-flex-align        : center;
+    -ms-flex-direction    : row;
+    flex-direction        : row;
+    font-size             : 0.050em;
+    max-height            : 0.1rem !important;
+
+    justify-items         : center;
+    padding               : 0 1em 0 0;
+    right                 : 0;
+    z-index               : 0;
+}
+
+
+
+.slides ~ .menubar, .menubar.bottom {
+    bottom : 0;
+    top    : auto;
+}
+
+
+
+.slides ~ .menubar ~ .controls {
+    margin-bottom : clamp(16px, 2.5 * var(--r-main-font-size) * var(--simplemenu-scale, 0.75), 100px);
+}
+
+
+
+.menubar .hidden {
+    display : none !important;
+    opacity : 0 !important;
+}
+
+
+
+
+/* hide everything */
+
+
+
