@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang = "en" >
+	<head >
+		<meta charset = "utf-8" >
+		<meta name = "viewport" content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+
+		<title >reveal.js</title >
+
+		<link rel = "stylesheet" href = "dist/reset.css" >
+		<link rel = "stylesheet" href = "dist/reveal.css" >
+		<!-- <link rel="stylesheet" href="dist/theme/black.css"> -->
+		<!-- <link rel = "stylesheet" href = "dist/theme/black.css" > -->
+		<link rel = "stylesheet" href = "dist/theme/dracula.css" >
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel = "stylesheet" href = "plugin/highlight/monokai.css" >
+		<style >
+			.fragment.blur {
+				filter : blur(5px);
+			}
+
+
+
+			.fragment.blur.visible {
+				filter : none;
+			}
+
+
+		</style >
+	</head >
+	<body >
+		<div class = "reveal" >
+			<div class = "slides" >
+				<section >
+					<h2 class = "" >Team Sassy Bot</h2 >
+					<h3 class = "" >CSCI 3832 Final Project</h3 >
+					<a href = "#" >
+						<img class = "r-frame" src = "logo.svg" width = "200" >
+					</a >
+					<br />
+
+				</section >
+
+				<section >
+					<h2 class = "" >Team Members:</h2 >
+					<p class = "fragment custom blur" data-fragment-index = "1" >
+						Caroline Chang
+					</p >
+					<p class = "fragment custom blur" data-fragment-index = "2" >
+						Amber Wu
+					</p >
+					<p class = "fragment custom blur" data-fragment-index = "3" >
+						Mandukhai Amarsanaa
+					</p >
+					<p class = "fragment custom blur" data-fragment-index = "4" >
+						Michael Metz
+					</p >
+				</section >
+
+				<section data-auto-animate >
+					<h2 data-id = "code-title" >Models</h2 >
+					<pre data-id = "code-animation" >
+						<!-- <code data-url = "examples/code/models.py" data-line-start = "8" data-line-end = "118"></code > -->
+						<code data-url = "examples/code/models.py" data-trim data-line-numbers = "|8|9-21|118" ></code >
+					</pre >
+				</section >
+
+				<section >Slide 2</section >
+			</div >
+		</div >
+
+		<script src = "dist/reveal.js" ></script >
+		<script src = "plugin/notes/notes.js" ></script >
+		<script src = "plugin/markdown/markdown.js" ></script >
+		<script src = "plugin/embed/embed-code.js" ></script >
+		<script src = "plugin/highlight/highlight.js" ></script >
+		<script >
+			Reveal.initialize( {
+				hash              : true,
+				controlsLayout    : 'bottom-right',
+				controlsBackArrows: 'faded',
+				progress          : false,
+				center            : true,
+				plugins           : [ RevealMarkdown, EmbedCode, RevealHighlight, RevealNotes ]
+			} );
+		</script >
+	</body >
+</html >
