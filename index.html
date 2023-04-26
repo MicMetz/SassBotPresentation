@@ -116,7 +116,7 @@
 					<br />
 					<div style = "clear: both; word-spacing: 2px;" >
 						<!-- <p style = "float: left; text-align: left;" ></p > -->
-						<br />
+
 						<ol style = "float: left; text-align: left; font-size: 0.8em;" >
 							<li >Develop upon a baseline <a href = "https://github.com/AbdelkaderMH/iSarcasmEval" target = "_blank" >reference model</a ></li >
 							<li >Achieve minimum requirements, and progress from there.</li >
@@ -125,7 +125,7 @@
 					</div >
 				</section >
 
-				<section style="width: 100%;">
+				<section style = "width: 100%;" >
 					<div class = "row" >
 						<h2 style = "float: left; top: 0; left: 0;text-decoration: underline;" >Code Breakdown</h2 >
 					</div >
@@ -133,49 +133,51 @@
 					<br />
 
 					<!-- <div  > -->
-						<div class = "row" style = " word-spacing: 2px;">
+					<div class = "row" style = " word-spacing: 2px;" >
 
-							<div class = "column" style = "" >
+						<div class = "column" style = "" >
+							<div class = "row" >
+								<h3 style = "float: left; text-align: left; font-size:1em;" >Preprocessing</h3 >
+							</div >
+							<div class = "row" >
+								<ul style = "float: left; text-align: left; font-size: 0.5em; " >
+									<li style = "padding: 1rem 1rem 1.5rem 0rem;" >Gather data, replace emojis, urls, and usernames for generics</li >
+									<li style = "padding: 1rem 1rem 1.5rem 0rem;" >Create additional non-sarcastic statements</li >
+									<li style = "padding: 1rem 1rem 1.5rem 0rem;" >Combine and Divide Test and Validation Set, load onto Data Loaders</li >
+									<li style = "padding: 1rem 1rem 1.5rem 0rem;" ></li >
+									<li style = "padding: 1rem 1rem 1.5rem 0rem;" ></li >
+								</ul >
+							</div >
+						</div >
+
+						<div class = "column" >
+							<div class = "row" style = "margin-left: 0.5em;" >
 								<div class = "row" >
-									<h3 style = "float: left; text-align: left; font-size:1em;" >Preprocessing</h3 >
+									<h3 style = "float: left; text-align: left;font-size: 1em;" >Training</h3 >
+								</div >
+
+								<div class = "row" >
+									<ul style = "float: left; text-align: left; font-size: 0.5em; " >
+										<li style = "padding: 1rem 1rem 1.5rem 0rem;" >Trains selected model off of preprocessed dataset</li >
+										<li style = "padding: 1rem 1rem 1.5rem 0rem;" >Runs code off of validation sets, and reports scores</li >
+										<li style = "padding: 1rem 1rem 1.5rem 0rem;" >Saves the best scores</li >
+									</ul >
+								</div >
+
+							</div >
+							<div class = "row" style = "margin-left: 0.5em;" >
+								<div class = "row" >
+									<h3 style = "float: left; text-align: left;font-size: 1em;" >Predictions</h3 >
 								</div >
 								<div class = "row" >
 									<ul style = "float: left; text-align: left; font-size: 0.5em; " >
-										<li style = "padding: 1rem 1rem 1.5rem 0rem;" >Gather data, replace emojis, urls, and usernames for generics</li >
-										<li style = "padding: 1rem 1rem 1.5rem 0rem;" >Create additional non-sarcastic statements</li >
-										<li style = "padding: 1rem 1rem 1.5rem 0rem;" >Combine and Divide Test and Validation Set, load onto Data Loaders</li >
+										<li style = "padding: 1rem 1rem 1.5rem 0rem;" >Uses the previously acquired best model to then run on source</li >
 									</ul >
 								</div >
-							</div >
-							
-							<div class = "column"  >
-								<div class = "row" style = "margin-left: 0.5em;" >
-									<div class = "row" >
-										<h3 style = "float: left; text-align: left;font-size: 1em;" >Training</h3 >
-									</div >
 
-									<div class = "row" >
-										<ul style = "float: left; text-align: left; font-size: 0.5em; " >
-											<li style = "padding: 1rem 1rem 1.5rem 0rem;" >Trains selected model off of preprocessed dataset</li >
-											<li style = "padding: 1rem 1rem 1.5rem 0rem;" >Runs code off of validation sets, and reports scores</li >
-											<li style = "padding: 1rem 1rem 1.5rem 0rem;" >Saves the best scores</li >
-										</ul >
-									</div >
-
-								</div >
-								<div class = "row" style = "margin-left: 0.5em;" >
-									<div class = "row" >
-										<h3 style = "float: left; text-align: left;font-size: 1em;" >Predictions</h3 >
-									</div >
-									<div class = "row" >
-										<ul style = "float: left; text-align: left; font-size: 0.5em; " >
-											<li style = "padding: 1rem 1rem 1.5rem 0rem;" >Uses the previously acquired best model to then run on source</li >
-										</ul >
-									</div >
-
-								</div >
 							</div >
 						</div >
+					</div >
 					<!-- </div > -->
 				</section >
 
