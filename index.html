@@ -40,6 +40,7 @@
 				clear   : both;
 			}
 
+
 		</style >
 	</head >
 
@@ -190,14 +191,24 @@
 
 
 				<section data-auto-animate data-name = "Code|Data" >
-					<section >
+					<section class="custom" >
 						<div class = "row" >
 							<h2 data-id = "code-title" style = "float: left; top: 0; left: 0;text-decoration: underline; color: #e91d63;" >Training Data</h2 >
 						</div >
-						<pre data-id = "code-animation" >
-						<!-- <code data-url = "assets/code/models.py" data-line-start = "8" data-line-end = "118"></code > -->
-							<code data-url = "assets/data/TrainData.csv" ></code >
-						</pre >
+						<br />
+						<div class = "row r-stretch" >
+							<iframe
+									data-src = "assets/data/TrainData.html" allowfullscreen class=""
+									style = "
+									display: block;
+									border:3px solid #666;
+									margin-bottom:5px;
+									width: 100%;
+									height: 100%;
+									/* height: 100vh; */
+								" >
+							</iframe >
+						</div >
 					</section >
 
 					<section >
@@ -222,15 +233,33 @@
 				</section >
 
 
-				<section data-auto-animate data-name = "Testing" >
-					<div class = "row" >
-						<h2 style = "float: left; top: 0; left: 0;text-decoration: underline; color: #e91d63;" >Testing</h2 >
-					</div >
-					<br />
-					<div class="row">
-						<!-- <span class = "tweet" data-src = "assets/embed/TaylorClark.html" > </span > -->
-						<span class = "tweet" data-src = "https://twitter.com/Misstaydawnn/status/1101590156304216064" > </span >
-					</div>
+				<section data-name = "Testing" >
+					<section >
+						<div class = "row" >
+							<h2 style = "float: left; top: 0; left: 0;text-decoration: underline; color: #e91d63;" >Testing</h2 >
+						</div >
+						<div class = "row" >
+							<img data-src = "assets/embed/TaylorClark.png" />
+							<!-- <span class = "tweet" data-src = "https://twitter.com/Misstaydawnn/status/1101590156304216064" > </span > -->
+						</div >
+
+					</section >
+
+					<!-- <section > -->
+					<!-- 	&lt;!&ndash; <div class = "row" id = "TestData" data-state = "training"> &ndash;&gt; -->
+
+					<!-- 	&lt;!&ndash; </div > &ndash;&gt; -->
+					<!-- </section > -->
+					<section >
+						<section >
+							<p >Or presenting some Google Spreadsheet?</p >
+						</section >
+						<section data-fullscreen >
+							<iframe class = "stretch" data-src = "https://docs.google.com/spreadsheets/d/1HH4c7Wdcd6RBIbaw7WsTI4iYjgJAhCAul2td93I-coA/edit?usp=sharing" ></iframe >
+						</section >
+					</section >
+
+
 				</section >
 
 
@@ -260,10 +289,41 @@
 		<script src = "plugin/notes/notes.js" ></script >
 		<script src = "plugin/markdown/markdown.js" ></script >
 		<script src = "plugin/embedCode/embed-code.js" ></script >
-		<script src = "plugin/embedTweet/embed-tweet.js" ></script >
+		<!-- <script src = "plugin/embedTweet/embed-tweet.js" ></script > -->
 		<script src = "plugin/highlight/highlight.js" ></script >
 		<script src = "plugin/simplemenu/simplemenu.js" ></script >
+		<script src = "plugin/chart/Chart.js" ></script >
+		<script >
+			Reveal.addEventListener( 'training', function ( event ) {
+				console.log( "Training" );
+				var reader     = new FileReader();
+				var slideTable = document.getElementById( "TestData" );
+				var fileInput  = "assets/data/TrainData.csv";
+				var file       = new File( [ fileInput ], "TrainData.csv" );
 
+				reader.onload = function ( e ) {
+					var contents = e.target.result;
+					var lines    = contents.split( "\n" );
+					var table    = document.createElement( "table" );
+					table.setAttribute( "id", "trainTable" );
+					table.setAttribute( "class", "table" );
+					for ( var i = 0; i < lines.length; i++ ) {
+						var line = lines[ i ].split( "," );
+						var row  = document.createElement( "tr" );
+						for ( var j = 0; j < line.length; j++ ) {
+							var cell = document.createElement( "td" );
+							cell.setAttribute( "class", "table-cell" );
+							cell.appendChild( document.createTextNode( line[ j ] ) );
+							row.appendChild( cell );
+						}
+						table.appendChild( row );
+					}
+					slideTable.appendChild( table );
+				};
+				reader.readAsText( file );
+			} );
+
+		</script >
 		<script >
 			Reveal.initialize( {
 				hash              : true,
@@ -283,7 +343,7 @@
 					scale        : 0.010,
 					csspath      : ""
 				},
-				plugins           : [ RevealMarkdown, EmbedCode, RevealHighlight, RevealNotes, Simplemenu, RevealEmbedTweet ]
+				plugins           : [ RevealMarkdown, EmbedCode, RevealHighlight, RevealChart, Simplemenu ]
 			} );
 		</script >
 	</body >

@@ -1,0 +1,1391 @@
+﻿<!doctype html>
+<html lang = "en" >
+	<style >
+		.ttable {
+			border-collapse  : collapse;
+			background-color : white;
+			width            : fit-content;
+			table-layout     : auto;
+		}
+
+
+
+		.tth, .ttd {
+			padding    : 1rem 1rem;
+			text-align : left;
+		}
+
+
+
+		.ttr:hover {background-color : coral;}
+
+
+
+		html, body {
+			position : absolute;
+			width    : 100vw;
+			height   : 100vh;
+			margin   : 0px;
+		}th
+
+	</style >
+	<body >
+		<table class = "ttable" >
+			<tr class = "ttr" >
+				<th class = "ttd" ></th >
+				<th class = "ttd" >text</th >
+				<th class = "ttd" >sarcastic</th >
+				<th class = "ttd" >rephrase</th >
+				<th class = "ttd" >sarcasm</th >
+				<th class = "ttd" >irony</th >
+				<th class = "ttd" >satire</th >
+				<th class = "ttd" >understatement</th >
+				<th class = "ttd" >overstatement</th >
+				<th class = "ttd" >rhetorical_question</th >
+				<th class = "ttd" ></th >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >The only thing I got from college is a caffeine addiction</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >College is really difficult, expensive, tiring, and I often question if a degree is worth the stress.</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >I love it when professors draw a big question mark next to my answer on an exam because I’m always like yeah I don’t either ¯\_(ツ)_/¯</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >I do not like when professors don’t write out specific notes on my answers to exams.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >2</td >
+				<td class = "ttd" >Remember the hundred emails from companies when Covid started getting real? I’ve gotten three in regards to support for protests. And only @SavageXFenty shared helpful links and actually said black lives matter... we love capitalism 🥰🙌🏼</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >I, at the bare minimum, wish companies actually cared about marginalized communities. At the max, that our capitalistic society is dismantled.</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >3</td >
+				<td class = "ttd" >Today my pop-pop told me I was not “forced” to go to college 🙃 okay sure sureeee</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >Today my pop-pop told me I was not "forced" to go to college. That's not true.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >4</td >
+				<td class = "ttd" >@VolphanCarol @littlewhitty @mysticalmanatee I did too, and I also reported Cancun Cruz not worrying about the heartbeats of his constituents without electricity or heat when he fled to Mexico.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >I would say Ted Cruz is an asshole and doesn’t actually care about people/babies/fetuses. He just wants to wage a war on women and keep the patriarchy in power.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >5</td >
+				<td class = "ttd" >@jimrossignol I choose to interpret it as "XD": the universal emoticon for laughing at those poor, poor folks in Ubisoft's marketing department who have to deal with that branding until the servers quietly shut down 8 months after launch.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >It's a terrible name and the product sounds awful.</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >6</td >
+				<td class = "ttd" >Why would Alexa's recipe for Yorkshire pudding be a bhaji yorkshire pudding ?? @bbcgoodfood</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >Great recipe from Alexa</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >7</td >
+				<td class = "ttd" >someone hit me w a horse tranquilizer istg ive been in a pool of sweat for 6 hours and i havent slept im so tired but i love my friend so much and oh my fucking god i cant rn</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >Simply “I’m miserable.”</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >8</td >
+				<td class = "ttd" >Loving season 4 of trump does America. Funniest season yet #DonaldTrump #Trump #MAGA #MAGA2020</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >this last year of trumps presidency is not going too well</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >9</td >
+				<td class = "ttd" >Holly Arnold ??? Who #ImACeleb #MBE nope not sure oh hang on you mean MBE yes that’s her !!!</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >Holly Arnold seem like a nice lady, just feel that keeping on about having an MBE may start to annoy her fans.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >10</td >
+				<td class = "ttd" >ANY PENSIONER AND 4 YEAR OLD WHO DARE TAKE ME ON AT DINOSAUR THEMED CRAZY GOLF WILL BE CRUSHED, CRUSHED I TELL YOU. https://t.co/yZlafy0lsd</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >Had a great time playing crazy golf with the family, and I won!</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >11</td >
+				<td class = "ttd" >See Brexit is going well</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >Brexit really isn't going to plan.</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >12</td >
+				<td class = "ttd" >Just like to congratulate everyone on the Kop today for the fastest ever Poor Scouser Tommy. Slow the fuck down</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >Can we not sing poor scouser tommy abit slower instead of super fast</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >13</td >
+				<td class = "ttd" >do i just blast maneskin to get hyped for my osce or??</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >I probably shouldn't be listening to Maneskin before my OSCE, it's not the right vibe.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >14</td >
+				<td class = "ttd" >@heathoween @tylerrjoseph Yes, because we need literally every single fucking celebrity to speak up on a topic that's been forced down everyone's throats for the past four months. I use the internet to get away from these fucking real life problems; not everyone
+				                   needs to weigh
+				                   in.
+				</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >"Not every celebrity needs to weigh in on every political issue there is"</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >15</td >
+				<td class = "ttd" >I never thought I'd say this, but I have become one of those people who like bounty bars.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >No, it would be less logical.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >16</td >
+				<td class = "ttd" >My eldest is having a wild Friday night out. She's going to bingo. 😂</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >My eldest is going to play bingo tonight.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >17</td >
+				<td class = "ttd" >Whoever’s toddler ass sprayed the entire toilet backstage, I hope you stub your toe and bite your tongue really hard. also you were clearly dehydrated, go drink some damn water like an adult</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >I hope whoever keeps peeing all over the bathroom at work stops doing that.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >18</td >
+				<td class = "ttd" >gaslight gatekeep girl boss</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >I do not gaslight, gatekeep, or am a girl boss.</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >19</td >
+				<td class = "ttd" >I was only in Taylor Swift’s top 0.10% of listeners on Spotify but last year but yeah totally sound that Swiftogeddan in Glasgow is sold out</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >I am not happy that I didn't get tickets to the Swiftogeddan event when I should be there instead of most people who bought tickets.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >20</td >
+				<td class = "ttd" >Imagine going to university for 4 years when you could just follow Elon Musk on twitter for free</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >Go to school</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >21</td >
+				<td class = "ttd" >Not got one lynx Africa for Christmas Day this year, shocked and outraged. #RuinedChristmas</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >Lynx Africa is terrible and I’m glad I didn’t get one for Christmas this year</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >22</td >
+				<td class = "ttd" >The villains in super hero films are awfully polite. They always confine their invasions to being above one particular city</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >I would say that the invasions that take place are unrealistic and are only shown in this way for plot purposes, as opposed to realism.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >23</td >
+				<td class = "ttd" >Oh my goodness. It’s the first week of the summer holidays and Harrison has found his recorder.</td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >24</td >
+				<td class = "ttd" >@AsdaServiceTeam imagine your delivery being 2 hours late, and imagine calling up your service team only for them to hang up at 10pm, coincidentally the same time the office closes. But it’s okay, my £3 delivery fee is being refunded though</td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >25</td >
+				<td class = "ttd" >teams is down what a shame I can’t do my assignments 👉🏽👈🏽</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >Teams is down so I’m happy I can’t do my assignments because of this</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >26</td >
+				<td class = "ttd" >@DuncanEdwards03 @PoliticsForAlI Well I doubt they're trying to smash the doors in to change the regulation of cough medicine.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >They are from an anti-vax movement and are attempting to enter the building that regulates medicine to change covid</td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >27</td >
+				<td class = "ttd" >Not at all concerning that a man's just been round to fiddle with the boiler and now he's left the carbon monoxide alarm won't stop beeping</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >Very concerning that a man's just been round to fiddle with the boiler and now he's left the carbon</td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >28</td >
+				<td class = "ttd" >Not telling anyone how I voted in case it doesn't come true #EUref</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >I voted leave/remain in the EU Referendum</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >29</td >
+				<td class = "ttd" >just wondering how to get my diss down by 1500 words .. such fun</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >getting my diss down by 1500 words is not fun.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >30</td >
+				<td class = "ttd" >It’s been a blissful 2.5 hours of sleep tonight</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >I only got 2.5 hours of sleep last night and it wasn’t enough</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >31</td >
+				<td class = "ttd" >Falling asleep at your laptop is always fun</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >I hate falling asleep at my laptop</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >32</td >
+				<td class = "ttd" >Trying to know all this history tonight is gonna kill me</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >trying to know all this history is going to be be a challenge</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >33</td >
+				<td class = "ttd" >love it when Jonny makes me use earphones to watch something on my phone so he can play fifa</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >Can’t believe Jonny is making me use headphones to watch something so he can play fifa</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >34</td >
+				<td class = "ttd" >Nice to be compared to a brick wall 😂</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >"Not happy i have been compared to a brick wall".</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >35</td >
+				<td class = "ttd" >@BellularGaming Blizzard will have to make sure it doesn't exceed the recommended fun level of 10%.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >Repulsing people would certainly draw attention.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >36</td >
+				<td class = "ttd" >if 2020 was a nose it’d be mine 🐦</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >My nose is awful</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >37</td >
+				<td class = "ttd" >Would anyone like to give me some money? #FinDom</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >I just watched a documentary about finical domination and would be interested in getting into this line of work, if anyone is interested please let me know - if being genuine. Or - I dont think</td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >I would ever be able to work as a Fin Dom, I couldnt demand money from someone, I would feel bad!</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >38</td >
+				<td class = "ttd" >Got very excited that my national trust card arrived I am officially a grandma https://t.co/mtkWJCxwom</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >I am officially a national trust member</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >39</td >
+				<td class = "ttd" >Vaccinated this morning. Not sure it's worked - still committed to Apple and no extra autism detected. Bloody science.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >Vaccinated this morning. The vaccine did not contain a Microsoft chip, nor did it make me more autistic than I already</td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >40</td >
+				<td class = "ttd" >ITS COMING HOOOOOME</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >It’s coming Rome</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >41</td >
+				<td class = "ttd" >i wish i could tap in to the government bank account🙄🙄🙄</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >I wish I were as rich as politicians are</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >42</td >
+				<td class = "ttd" >90% of adulthood is just refilling your Brita pitcher.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >I have to refill my Brita pitcher too often.</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >43</td >
+				<td class = "ttd" >I suppose though, we did sign one for the future so, you know, not all gloom and doom...we might be good in 6 years time.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >I wish we could have signed a player for the first team.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >44</td >
+				<td class = "ttd" >Where is the Chancellor? Please check the back of your sofas.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >(!) I wonder where the Chancellor is after such an important decision?</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >45</td >
+				<td class = "ttd" >i have been informed that, as aroace and agender, i have triple visibility and am now visible from space.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >As someone who is aspec in multiple ways, I enjoy having all parts of my identity being recognised.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >46</td >
+				<td class = "ttd" >going to be running on three hours of sleep at work tonight! so excited!!!</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >i’m not ready to go to work after only getting three hours of sleep last night.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >47</td >
+				<td class = "ttd" >@AlexShawESPN @robwishart @GNev2 Does he order 11 at once and drink each one at just over 5 minutes, OR do we have to take into account going to the bar? Either way it’s a disgrace and not what we should be promoting to the kids.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >I don’t think</td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >48</td >
+				<td class = "ttd" >i’m now reading 4 books at once what could go wrong 🧡</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >"i'm reading 4 books at once, let's see if i can actually finish them all"</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >49</td >
+				<td class = "ttd" >@ZionWarrior6 I think lunch was ready at the care home, then it was time for nap and then Countdown.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >He's too old?</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >50</td >
+				<td class = "ttd" >@Schlippertysch1 @anon_opin Very good. Just need to work on your spelling now 👍</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >Excuse me but I think that you have made a spelling error on your last comment there.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >51</td >
+				<td class = "ttd" >July 1st. Half way point of the year. Well I think we can all agree that 2020 has gone swimmingly so far.</td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >52</td >
+				<td class = "ttd" >Got locked out of Twitter for saying it’s embarrassing to be an arsenal fan. That’s not okay, but people can be abusive and racist and nothing?!? Okay! 🤣🙄</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >I don’t appreciate being banned for using the word embarrasing, when others can be</td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >53</td >
+				<td class = "ttd" >I just absolutely LOVE how I've got to work outside for the next 3 days in the heatwave.</td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >54</td >
+				<td class = "ttd" >@ThePartridgePod Defrost the freezer with the cast of Hollyoaks. Any of them that wanted an extra fun trip could pop to the recycling centre with some empty pesto jars. Magic.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >I would actually answer the question - 'Who would you want to spend</td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >55</td >
+				<td class = "ttd" >So, very delayed flight from Bristol to Edinburgh @easyJet, trademark vagueness from staff, with a chronic lack of empathy to boot (despite me travelling with three young children)... now, time to feed our family with £3 vouchers (at airport</td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >prices!) #bollocks</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >To buy an airport meal with a £3 voucher is impossible.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >56</td >
+				<td class = "ttd" >we need to normalise having absolutely fried bleach damaged hair. people should talk about this</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >I am self conscious of my fried, bleach-damaged hair.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >57</td >
+				<td class = "ttd" >Wizkid is the king, ok lol</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >Wizkid is not the king lol</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >58</td >
+				<td class = "ttd" >Ah yes, it really is wood-burning stoves in sub-Saharan Africa thats driving the climate crisis 🧠 https://t.co/lShlgWYGOX</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >Wood burning stoves are definitely not an environmental issue that needs to be immediately addressed</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >59</td >
+				<td class = "ttd" >Started watching house of cards, 4 episodes in. Already I can see it was a good choice😄</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >It was a really good choice! You should all go watch it</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >60</td >
+				<td class = "ttd" >Social Care for the young is basically a bath board and bed rest and your done.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >Social care for the young is non existent.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >61</td >
+				<td class = "ttd" >@PONOS_EN Very nice. We're now briefly up to date. Hopefully doesn't take you so long to do the English release of the new pixie after we get 9.10.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >I am disappointed that it took so long to get to this point where we are up to</td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >62</td >
+				<td class = "ttd" >JUSTICE HAS BEEN DONE.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >Justice will never be done</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >63</td >
+				<td class = "ttd" >What a Race ! #sarcastic #WTF1 https://t.co/zRtL5alnoT</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >this was a boring race.</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >64</td >
+				<td class = "ttd" >help! i'm being haunted by dead people! (my dissertations)</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >I hate my dissertation</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >65</td >
+				<td class = "ttd" >my neighbors taunting me outside my office window by chilling in their hot tub every remotely warm day whilst I sit here on back-to-back zooms all day every day. the audacity is astonishing.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >Very jealous of my neighbors sitting in their hot</td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >66</td >
+				<td class = "ttd" >I've been doing physics for 40 minutes I think I deserve a break 😂😂😂😭 I'm never going to get it all done at this rate</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >I've been doing physics for 40 minutes, i cant take a break or I'm never going to get it all done at this rate</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >67</td >
+				<td class = "ttd" >Billy Gunn sorta relevant for the first time in years...</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >Billy Gunn is actually in the spotlight now.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >68</td >
+				<td class = "ttd" >wish i could understand string theory without knowing math..... alas i guess i am too hot for conceptual physics</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >I could have said that I was too dumb for conceptual physics.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >69</td >
+				<td class = "ttd" >So we actually have to do hot girl summer without 1989 Taylor’s version., I’m sick</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >I'm so sad that 1989 (Taylor's version) won't be released this summer.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >70</td >
+				<td class = "ttd" >🌶 Spiced Coconut curry 🥥</td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >71</td >
+				<td class = "ttd" >considering crowd surfing the next time the hallways are too packed</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >The hallways are very crowded lately. I would prefer to take another form of transportation that is more efficient than walking, but none such option exists.</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >72</td >
+				<td class = "ttd" >Avoid mass gatherings.. does this mean that I can stay home tomorrow as I work at a school? No I thought not. #schoolclosure</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >I can not avoid miss gatherings as I work in a school.</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >73</td >
+				<td class = "ttd" >You know the wolves match is boring when you're talking with your mate about the best way to wire up his new shed!</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >This match isn't too interesting, we are using the time to talk about electrics instead!</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >74</td >
+				<td class = "ttd" >What a wonderful time to have your AC go out https://t.co/jqjqG1dGOa</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >Literally the worst possible time to have my AC go out.</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >75</td >
+				<td class = "ttd" >@WalesOnline Riveting news.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >What a boring tweet.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >76</td >
+				<td class = "ttd" >My (extended) fam was discussing going on a trip instead of getting presents for Christmas, like okay I’m bout it...</td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >77</td >
+				<td class = "ttd" >okay but like the say so song ain’t that bad. I’m unironically jam to it lmao</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >The say so song was good after the first 5 listens but after that it got annoying</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >78</td >
+				<td class = "ttd" >if you see me crying in the self-service car wash in my rosati’s uniform, no you didn’t ❤️</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >No.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >79</td >
+				<td class = "ttd" >Tinnitus is my favourite thing ever I love it. So loud so atmospheric https://t.co/mNJw5GvPzy</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >My tinnitus is so annoying</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >80</td >
+				<td class = "ttd" >thanks @SovietWomble for ratting my location out on stream and then embarrassing me 😂 it made my day though https://t.co/3b7Cjql2GO</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >It wasn't very nice to rat out my location</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >81</td >
+				<td class = "ttd" >love living in a capitalist society where i look forward to getting a surgery where i’m legit GETTING AN INTERNAL BODY PART REMOVED bc it means i’ll get a few days off from work xoxo</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >I hate that in order to get time off of work, I have to do</td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >82</td >
+				<td class = "ttd" >i love ingesting poison and then wondering why my tummy is rumbling the next morning</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >Every time I drink I wake up with an upset stomach</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >83</td >
+				<td class = "ttd" >Beautician and the Beast (1997). Best Timothy Dalton film of all time.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >I would say what I said above: Beautician and the Beast isn't Timothy Dalton's best film.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >84</td >
+				<td class = "ttd" >@FeeyaCruz Ahahahaha the Feeya I know and love, miss u 😢</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >‘Oh Feeya, you haven’t changed’’</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >85</td >
+				<td class = "ttd" >absolutely love waking up to the fire alarm at 7 am 😍</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >I hate waking up to the fire alarm at 7 am.</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >86</td >
+				<td class = "ttd" >fully vaxxed feeling very girlboss</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >fully vaxxed not feeling very girlboss</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >87</td >
+				<td class = "ttd" >I feel like with the pandemic and all we should now be allowed to publicly shame babies for just like coughing into the open air you know what I mean</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >I would say that “It’s a little gross seeing a baby cough openly in public when adults are</td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >88</td >
+				<td class = "ttd" >Let me guess, it has to be Charlotte Tilbury makeup. And if by chance you do take it off, use Charlotte Tilbury skincare https://t.co/0c2IfIpy8l</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >She just wants you to use her make-up and skincare.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >89</td >
+				<td class = "ttd" >The typhoon flew over me today absolutely fuming they forgot to bomb me</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >the typhoon flew over me today and i didnt get bombed</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >90</td >
+				<td class = "ttd" >love getting assignments at 6:25pm on a Friday!!</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >Please do not give me an assignment right before I clock out because now I have to work overtime</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >91</td >
+				<td class = "ttd" >Raging debate on the importance of an Orlando Magic Summer League Championship. Definitely a notch below 6 if decided by coin flip. https://t.co/LG0VRwkrKO</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >An uninteresting conversation regarding the importance of an Orlando Magic Summer</td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >92</td >
+				<td class = "ttd" >@rits_meg @freedomsenpai hot loli</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >great art, involve rinako-chan</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >93</td >
+				<td class = "ttd" >Between Mikey cooking and Didi cooking for me I relaxing 😎 cooking?? I don’t know her</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >I appreciate that my sister and brother cook for me</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >94</td >
+				<td class = "ttd" >Ah gotta love that Friday morning burnt out feeling 🌄</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >I hate feeling burnt out from work and the never-ending pandemic.</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >95</td >
+				<td class = "ttd" >@PFTompkins Her family should definitely not seek mental health guidance. 😬</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >They should seek guidance.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >96</td >
+				<td class = "ttd" >How I flirt with boys</td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >97</td >
+				<td class = "ttd" >Been trying to get my boyfriends attention. Let’s see how long it takes for him to see this tweet tho.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >Sitting next to my boyfriend but he'll notice me on twitter first.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >98</td >
+				<td class = "ttd" >My work email isn’t working so I can just log off for the day right? 🙄</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >I wish I would log off for the day because my email isn't working.</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >99</td >
+				<td class = "ttd" >watching olympic womens beach volleyball for the plot</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >I watch women's beach volleyball for the hot women.</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+			<tr class = "ttr" >
+				<td class = "ttd" >100</td >
+				<td class = "ttd" >there’s no better way to wake up than having one dog jump directly on your stomach and knock the wind out of you while the other drop a dead rodent on the end of the bed. 😑</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >"The worst way to wake up is...."</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >1</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" >0</td >
+				<td class = "ttd" ></td >
+			</tr >
+		</table >
+	</body >
+</html >
