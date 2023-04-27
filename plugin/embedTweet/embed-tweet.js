@@ -35,11 +35,11 @@ const initEmbedTweet = function(Reveal){
 
 
 	function load() {
-		if ( twttr != undefined && !document.querySelector('section[data-markdown]:not([data-markdown-parsed])') ) {
+		if ( twttr !== undefined && !document.querySelector('section[data-markdown]:not([data-markdown-parsed])') ) {
 			tweets = document.querySelectorAll(".tweet");
 			for (i = 0; i < tweets.length; ++i) {
 					//margin: 0;position: absolute; left: 50%;transform: translate(-50%,0%);
-				tweets[i].style.cssText = "margin: 0;position: absolute; left: 50%;width: 100%" + tweets[i].style.cssText;
+				tweets[i].style.cssText = "margin: 0;position: absolute; left: 50%;width: 100%; transform: translate(-25%,0%);" + tweets[i].style.cssText;
 				tweets[i].innerHTML = 	'<blockquote class="twitter-tweet" data-lang="en"><a href="' + tweets[i].getAttribute('data-src') + '">Tweet</a></blockquote>';
 			}
 			twttr.widgets.load()
