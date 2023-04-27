@@ -189,14 +189,24 @@
 				</section >
 
 
-				<section data-auto-animate data-name = "Code" >
+				<section data-auto-animate data-name = "Code|Data" >
+					<section >
+						<div class = "row" >
+							<h2 data-id = "code-title" style = "float: left; top: 0; left: 0;text-decoration: underline; color: #e91d63;" >Training Data</h2 >
+						</div >
+						<pre data-id = "code-animation" >
+						<!-- <code data-url = "assets/code/models.py" data-line-start = "8" data-line-end = "118"></code > -->
+							<code data-url = "assets/data/TrainData.csv" ></code >
+						</pre >
+					</section >
+
 					<section >
 						<div class = "row" >
 							<h2 data-id = "code-title" style = "float: left; top: 0; left: 0;text-decoration: underline; color: #e91d63;" >Preprocessor</h2 >
 						</div >
 						<pre data-id = "code-animation" >
-						<!-- <code data-url = "examples/code/models.py" data-line-start = "8" data-line-end = "118"></code > -->
-							<code data-url = "examples/code/models.py" data-trim data-line-numbers = "8|8-21|123" ></code >
+						<!-- <code data-url = "assets/code/models.py" data-line-start = "8" data-line-end = "118"></code > -->
+							<code data-url = "assets/code/models.py" data-trim data-line-numbers = "8|8-21|123" ></code >
 						</pre >
 					</section >
 
@@ -205,15 +215,22 @@
 							<h2 data-id = "code-title" style = "float: left; top: 0; left: 0;text-decoration: underline; color: #e91d63;" >Models</h2 >
 						</div >
 						<pre data-id = "code-animation" >
-						<!-- <code data-url = "examples/code/models.py" data-line-start = "8" data-line-end = "118"></code > -->
-							<code data-url = "examples/code/models.py" data-trim data-line-numbers = "8|8-21|123" ></code >
+						<!-- <code data-url = "assets/code/models.py" data-line-start = "8" data-line-end = "118"></code > -->
+							<code data-url = "assets/code/models.py" data-trim data-line-numbers = "8|8-21|123" ></code >
 						</pre >
 					</section >
 				</section >
 
 
-				<section data-auto-animate data-name = "Test" >
+				<section data-auto-animate data-name = "Testing" >
+					<div class = "row" >
+						<h2 style = "float: left; top: 0; left: 0;text-decoration: underline; color: #e91d63;" >Testing</h2 >
+					</div >
+					<br />
+					<div class="row">
+						<span class = "tweet" data-src = "https://twitter.com/Misstaydawnn/status/1101590156304216064" > </span >
 
+					</div>
 				</section >
 
 
@@ -242,7 +259,8 @@
 		<script src = "dist/reveal.js" ></script >
 		<script src = "plugin/notes/notes.js" ></script >
 		<script src = "plugin/markdown/markdown.js" ></script >
-		<script src = "plugin/embed/embed-code.js" ></script >
+		<script src = "plugin/embedCode/embed-code.js" ></script >
+		<script src = "plugin/embedTweet/embed-tweet.js" ></script >
 		<script src = "plugin/highlight/highlight.js" ></script >
 		<script src = "plugin/simplemenu/simplemenu.js" ></script >
 
@@ -265,7 +283,7 @@
 					scale        : 0.010,
 					csspath      : ""
 				},
-				plugins           : [ RevealMarkdown, EmbedCode, RevealHighlight, RevealNotes, Simplemenu ],
+				plugins           : [ RevealMarkdown, EmbedCode, RevealHighlight, RevealNotes, Simplemenu, RevealEmbedTweet ]
 			} );
 		</script >
 	</body >
