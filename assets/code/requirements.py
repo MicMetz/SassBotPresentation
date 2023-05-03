@@ -5,3 +5,7 @@ barbar~=0.2.1
 scikit-learn~=1.2.2
 transformers~=4.24.0
 emoji~=1.7.0
+argparse~=1.4.0
+random~=1.0.1
+os~=0.1.4
+urllib~=1.26.7
