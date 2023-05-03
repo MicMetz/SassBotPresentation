@@ -5,6 +5,7 @@ from transformers import AutoModel
 import torch.nn.functional as F
 
 
+
 # attention classifier class as a secondary set of layers.
 class AttentionWithContext(nn.Module):
     def __init__(self, hidden_dim):
@@ -13,13 +14,13 @@ class AttentionWithContext(nn.Module):
         self.attn = nn.Linear(hidden_dim, hidden_dim)
         self.contx = nn.Linear(hidden_dim, 1, bias=False)
 
+
     # internal tanh and softmax layer for calculations.
     def forward(self, inp):
         u = torch.tanh_(self.attn(inp))
         a = F.softmax(self.contx(u), dim=1)
         s = (a * inp).sum(1)
         return s
-
 
 # initalizes weights based on the class specified.
 def init_weights(m):
@@ -35,7 +36,6 @@ def init_weights(m):
         if m.bias is not None:
             nn.init.zeros_(m.bias)
 
-
 # transformer layer
 class TransformerLayer(nn.Module):
     def __init__(self, both=True,
@@ -45,6 +45,7 @@ class TransformerLayer(nn.Module):
         self.both = both
         self.transformer = AutoModel.from_pretrained(pretrained_path, output_hidden_states=True)
 
+
     def forward(self, input_ids=None, attention_mask=None):
         outputs = self.transformer(
             input_ids=input_ids,
@@ -53,9 +54,9 @@ class TransformerLayer(nn.Module):
 
         return outputs
 
+
     def output_num(self):
         return self.transformer.config.hidden_size
-
 
 # main attention classifier used by the model.
 class ATTClassifier(nn.Module):
@@ -72,6 +73,7 @@ class ATTClassifier(nn.Module):
 
         self.apply(init_weights)
 
+
     def forward(self, x):
         att = self.attention(x[0])  # (X[0] (bs, seqlenght, embedD) att = \sum_i alpha_i x[0][i]
 
@@ -80,12 +82,12 @@ class ATTClassifier(nn.Module):
         out = self.Classifier(xx)
         return out
 
-
 # used only for gradient reversal function used in the main transformer layer.
 class GradientReversalLayer(torch.autograd.Function):
     @staticmethod
     def forward(ctx, input):
         return input
+
 
     @staticmethod
     def backward(ctx, grad_output):
@@ -94,7 +96,6 @@ class GradientReversalLayer(torch.autograd.Function):
 
 def gradient_reversal_layer(x):
     return GradientReversalLayer.apply(x)
-
 
 # class that combines the transfomers with the attention matrix,
 class TransformerLayerG(nn.Module):
@@ -108,6 +109,7 @@ class TransformerLayerG(nn.Module):
         self.attention = AttentionWithContext(hidden_size)
         self.linear = nn.Linear(hidden_size * 2, hidden_size)
 
+
     def forward(self, input_ids=None, attention_mask=None):
         outputs = self.transformer(
             input_ids=input_ids,
@@ -118,6 +120,7 @@ class TransformerLayerG(nn.Module):
         x = self.linear(x)
 
         return x
+
 
     def output_num(self):
         return self.transformer.config.hidden_size
