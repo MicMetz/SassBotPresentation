@@ -57,7 +57,7 @@
 
 
             ul li {
-                padding-bottom : 0.5em;
+                margin : 1em 0;
             }
 
 
@@ -89,10 +89,11 @@
 
 
 								<section data-name = "Team">
-										<div class = "row">
-												<h2 class = "" style = "color: #e91d63;">Team Members:</h2 >
-										</div >
-										<section >
+
+										<section data-auto-animate>
+												<div class = "row">
+														<h2 style = "text-decoration: underline; color: #e91d63;font-size: 2em;">Team Members:</h2 >
+												</div >
 												<p class = "fragment custom blur;" data-fragment-index = "1">
 														Amber Wu
 												</p >
@@ -106,8 +107,13 @@
 														Michael Metz
 												</p >
 										</section >
-										<section >
-												<h3 >Roles</h3 >
+
+										<section data-auto-animate>
+												<div class = "row">
+														<h2 style = "text-decoration: underline; color: #e91d63;font-size: 2em;">Team Members:</h2 >
+														<h3 >Roles</h3 >
+												</div >
+
 												<p >
 														Amber Wu: <span style = "display: inline-block; color: #dd5566;">Team Lead, Researcher</span >
 												</p >
@@ -155,9 +161,9 @@
 										<br />
 										<div style = "clear: both; word-spacing: 2px;">
 												<ol style = "float: left; text-align: left; font-size: 1.2em;">
-														<li style = "margin: 1em 0;">Develop upon a baseline <a href = "https://github.com/AbdelkaderMH/iSarcasmEval" target = "_blank">reference model</a ></li >
-														<li style = "margin: 1em 0;">Achieve minimum requirements, and progress from there.</li >
-														<li style = "margin: 1em 0;">Combine source code with winning code research paper.</li >
+														<li >Develop upon a baseline <a href = "https://github.com/AbdelkaderMH/iSarcasmEval" target = "_blank">reference model</a ></li >
+														<li >Achieve minimum requirements, and progress from there.</li >
+														<li >Combine source code with winning code research paper.</li >
 												</ol >
 										</div >
 								</section >
@@ -172,43 +178,43 @@
 										<!-- <div  > -->
 										<div class = "row" style = " word-spacing: 2px;">
 
-												<div class = "column" style = "">
+												<div class = "column" style = "margin-right: 1.5em; margin-left: -1.5em;">
 														<div class = "row">
 																<h3 style = "float: left; text-align: left; font-size:1.2em;">Preprocessing</h3 >
 														</div >
 														<div class = "row">
 																<ul style = "float: left; text-align: left;font-size: 0.8em;list-style-type: circle;list-style-position: outside;">
-																		<li style = "padding: 1rem 1rem 1.5rem 0rem;">Gather data, replace emojis, urls, and usernames for generics</li >
-																		<li style = "padding: 1rem 1rem 1.5rem 0rem;">Create additional non-sarcastic statements</li >
-																		<li style = "padding: 1rem 1rem 1.5rem 0rem;">Combine and Divide Test and Validation Set, load onto Data Loaders</li >
-																		<!-- <li style = "padding: 1rem 1rem 1.5rem 0rem;"></li > -->
-																		<!-- <li style = "padding: 1rem 1rem 1.5rem 0rem;"></li > -->
+																		<li >Gather data, replace emojis, urls, and usernames for generics</li >
+																		<li >Create additional non-sarcastic statements</li >
+																		<li >Combine and Divide Test and Validation Set, load onto Data Loaders</li >
+																		<!-- <li ></li > -->
+																		<!-- <li ></li > -->
 																</ul >
 														</div >
 												</div >
 
-												<div class = "column">
-														<div class = "row" style = "margin-left: 0.5em;">
+												<div class = "column" style = "margin-left: 1.5em; margin-right: -1.5em;">
+														<div class = "row">
 																<div class = "row">
 																		<h3 style = "float: left; text-align: left;font-size: 1.2em;">Training</h3 >
 																</div >
 
 																<div class = "row">
 																		<ul style = "float: left; text-align: left;font-size: 0.8em;list-style-type: circle;list-style-position: outside;">
-																				<li style = "padding: 1rem 1rem 1.5rem 0rem;">Trains selected model off of preprocessed dataset</li >
-																				<li style = "padding: 1rem 1rem 1.5rem 0rem;">Runs code off of validation sets, and reports scores</li >
-																				<li style = "padding: 1rem 1rem 1.5rem 0rem;">Saves the best scores</li >
+																				<li >Trains selected model off of preprocessed dataset</li >
+																				<li >Runs code off of validation sets, and reports scores</li >
+																				<li >Saves the best scores</li >
 																		</ul >
 																</div >
 
 														</div >
-														<div class = "row" style = "margin-left: 0.5em;">
+														<div class = "row">
 																<div class = "row">
 																		<h3 style = "float: left; text-align: left;font-size: 1.2em;">Predictions</h3 >
 																</div >
 																<div class = "row">
 																		<ul style = "float: left; text-align: left;font-size: 0.8em;list-style-type: circle;list-style-position: outside;">
-																				<li style = "padding: 1rem 1rem 1.5rem 0rem;">Uses the previously acquired best model to then run on source</li >
+																				<li >Uses the previously acquired best model to then run on source</li >
 																		</ul >
 																</div >
 
@@ -710,14 +716,20 @@
 
 								<section data-name = "Evaluation">
 										<div class = "row">
-												<h2 style = "float: left; top: 0; left: 0;text-decoration: underline; color: #e91d63;font-size: 2em;">Initial Impressions</h2 >
+												<h2 style = "float: left; top: 0; left: 0;text-decoration: underline; color: #e91d63;font-size: 2em;">Conclusion</h2 >
 										</div >
 										<br />
 										<div style = "clear: both; word-spacing: 2px;">
-												<ul style = "float: left; text-align: left; font-size: 0.8em;">
-														<li style = "margin: 1em 0;">Learning rate varied significantly based on model, and epochs</li >
-														<li style = "margin: 1em 0;">Run time varies significantly based on model, and epochs</li >
-														<li style = "margin: 1em 0;">Cases involving lengthy learning rates, and epochs, resulted in overfitting, and a prejudice towards negative assessments</li >
+												<ul style = "float: left; text-align: left; font-size:1em;">
+														<li >
+																Model performed over minimum threshold off of a reduced model.
+														</li >
+														<li >
+																The best learning-rate found for this model was 3e-6, with 40 epochs, and batch size of 20 off of XLM.
+														</li >
+														<li >
+																The model would skew towards higher predictions for the negative class than the positive class. (Precision and Recall switched.)
+														</li >
 												</ul >
 										</div >
 								</section >
