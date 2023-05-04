@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang = "en" xmlns = "http://www.w3.org/1999/html">
+<html lang = "en" xmlns = "http://www.w3.org/1999/html" xmlns = "http://www.w3.org/1999/html">
 
 		<head >
 				<meta charset = "utf-8">
@@ -41,23 +41,21 @@
 
 
 
-            ul {
-                margin  : 0;
-                padding : 0;
+            ul.a {
+                list-style-position : inside;
+                padding-left        : 0;
             }
 
 
 
             ul.a li span {
-                left     : -0.5em;
-                position : relative;
 
             }
 
 
 
-            ul li {
-                margin : 1em 0;
+            ul.a li {
+                margin : 1em 0 0 0;
             }
 
 
@@ -67,6 +65,7 @@
                 display        : inline-block;
                 height         : 100%;
                 vertical-align : middle;
+                width          : 0;
             }
 
 				</style >
@@ -81,10 +80,14 @@
 
 
 								<section data-name = "Title">
-										<h2 class = "" style = "color: #e91d63;">Team Sassy Bot</h2 >
-										<h3 class = "">CSCI 3832</h3 >
-										<img data-src = "assets/sassybot.gif" style = "height: 180px; margin: 0 auto 4rem auto; background: transparent;"/>
+										<div class = "row">
+												<h2 class = "" style = "color: #e91d63;">Team Sassy Bot</h2 >
+												<h3 class = "">CSCI 3832</h3 >
+										</div >
 										<br />
+										<div class = "row">
+												<img data-src = "assets/sassybot.gif" style = "height: 180px; margin: 0 auto 4rem auto; background: transparent;"/>
+										</div >
 								</section >
 
 
@@ -144,7 +147,7 @@
 												<div class = "row">
 														<h3 style = "float: left; text-align: left;font-size: 1.2em;">Referencing F1 Score of Sarcasm Class</h3 >
 												</div >
-												<ul style = "float: left; text-align: left;font-size: 1em;list-style-type: circle;list-style-position: outside;">
+												<ul style = "float: left; text-align: left;font-size: 1em;list-style-type: circle;list-style-position: outside;" class = "a">
 														<li >Minimum: &#160;&#160; 0.275</li >
 														<li >Threshold: &#160; 0.4</li >
 														<li >Peak: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; 0.605</li >
@@ -176,14 +179,14 @@
 
 										<br />
 										<!-- <div  > -->
-										<div class = "row" style = " word-spacing: 2px;">
+										<!-- <div class = "row" style = " word-spacing: 2px;"> -->
 
-												<div class = "column" style = "margin-right: 1.5em; margin-left: -1.5em;">
-														<div class = "row">
+										<div class = "column" style = "max-width: 45%; padding-right: 2rem;">
+												<div class = "row">
 																<h3 style = "float: left; text-align: left; font-size:1.2em;">Preprocessing</h3 >
 														</div >
 														<div class = "row">
-																<ul style = "float: left; text-align: left;font-size: 0.8em;list-style-type: circle;list-style-position: outside;">
+																<ul style = "float: left; text-align: left;font-size: 0.8em;list-style-type: circle;list-style-position: outside;" class = "a">
 																		<li >Gather data, replace emojis, urls, and usernames for generics</li >
 																		<li >Create additional non-sarcastic statements</li >
 																		<li >Combine and Divide Test and Validation Set, load onto Data Loaders</li >
@@ -193,34 +196,32 @@
 														</div >
 												</div >
 
-												<div class = "column" style = "margin-left: 1.5em; margin-right: -1.5em;">
-														<div class = "row">
+										<div class = "column" style = "max-width: 45%;">
+												<div class = "row">
 																<div class = "row">
 																		<h3 style = "float: left; text-align: left;font-size: 1.2em;">Training</h3 >
 																</div >
 
 																<div class = "row">
-																		<ul style = "float: left; text-align: left;font-size: 0.8em;list-style-type: circle;list-style-position: outside;">
+																		<ul style = "float: left; text-align: left;font-size: 0.8em;list-style-type: circle;list-style-position: outside;" class = "a">
 																				<li >Trains selected model off of preprocessed dataset</li >
 																				<li >Runs code off of validation sets, and reports scores</li >
 																				<li >Saves the best scores</li >
 																		</ul >
 																</div >
-
+																<br />
 														</div >
-														<div class = "row">
 																<div class = "row">
 																		<h3 style = "float: left; text-align: left;font-size: 1.2em;">Predictions</h3 >
 																</div >
 																<div class = "row">
-																		<ul style = "float: left; text-align: left;font-size: 0.8em;list-style-type: circle;list-style-position: outside;">
+																		<ul style = "float: left; text-align: left;font-size: 0.8em;list-style-type: circle;list-style-position: outside;" class = "a">
 																				<li >Uses the previously acquired best model to then run on source</li >
 																		</ul >
 																</div >
 
-														</div >
 												</div >
-										</div >
+										<!-- </div > -->
 										<!-- </div > -->
 								</section >
 								<!---------------------------------------------------------- Dataset Code ---------------------------------------------------------->
@@ -715,23 +716,56 @@
 
 
 								<section data-name = "Evaluation">
-										<div class = "row">
-												<h2 style = "float: left; top: 0; left: 0;text-decoration: underline; color: #e91d63;font-size: 2em;">Conclusion</h2 >
-										</div >
-										<br />
-										<div style = "clear: both; word-spacing: 2px;">
-												<ul style = "float: left; text-align: left; font-size:1em;">
-														<li >
-																Model performed over minimum threshold off of a reduced model.
-														</li >
-														<li >
-																The best learning-rate found for this model was 3e-6, with 40 epochs, and batch size of 20 off of XLM.
-														</li >
-														<li >
-																The model would skew towards higher predictions for the negative class than the positive class. (Precision and Recall switched.)
-														</li >
-												</ul >
-										</div >
+
+										<!------------------------------------------------------------- Conclusion ---------------------------------------------------------->
+										<section data-name = "Conclusion">
+												<div class = "row">
+														<h2 style = "float: left; top: 0; left: 0;text-decoration: underline; color: #e91d63;font-size: 2em;">Conclusion</h2 >
+												</div >
+												<br />
+												<div style = "clear: both; word-spacing: 2px;">
+														<ul style = "float: left; text-align: left; font-size:1em;" class = "a">
+																<li >
+																		Model performed over minimum threshold off of a reduced model.
+																</li >
+																<li >
+																		The best learning-rate found for this model was 3e-6, with 40 epochs, and batch size of 20 off of XLM.
+																</li >
+																<li >
+																		The model would skew towards higher predictions for the negative class than the positive class. (Precision and Recall switched.)
+																</li >
+														</ul >
+												</div >
+										</section >
+										<!------------------------------------------------------------- /Conclusion ---------------------------------------------------------->
+
+
+										<!------------------------------------------------------------- Complications ---------------------------------------------------------->
+										<section data-name = "Complications">
+												<div class = "row">
+														<h2 style = "float: left; top: 0; left: 0;text-decoration: underline; color: #e91d63;font-size: 2em;">Complications</h2 >
+												</div >
+												<br />
+												<div style = "clear: both; word-spacing: 2px;">
+														<ul style = "font-size:1em; width: 100%;" class = "a">
+																<li >
+																		<span style = "">
+																				There were issues gaining access to the CU Research Computing Cluster.
+																				<br />
+																				This made the task of training the model more of a tedious slog than it needed to be.
+																		</span >
+																</li >
+																<li >
+																		The best learning-rate found for this model was 3e-6, with 40 epochs, and batch size of 20 off of XLM.
+																</li >
+																<li >
+																		The model would skew towards higher predictions for the negative class than the positive class. (Precision and Recall switched.)
+																</li >
+														</ul >
+												</div >
+										</section >
+
+
 								</section >
 
 
