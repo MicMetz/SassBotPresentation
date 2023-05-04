@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang = "en">
+<html lang = "en" xmlns = "http://www.w3.org/1999/html">
 
 	<head >
 		<meta charset = "utf-8">
@@ -223,18 +223,62 @@
 
 
 					<!---------------------------------------------------------- Imported Modules ---------------------------------------------------------->
-					<section data-name = "Modules">
+					<section data-auto-animate data-name = "Modules">
 						<div class = "row">
 							<h2 data-id = "code-title" style = "float: left; top: 0; left: 0;text-decoration: underline; color: #e91d63;font-size: 2em;">Imported Modules</h2 >
 						</div >
 						<br />
-						<div class = "row">
-							<pre data-id = "code-animation">
-								<code data-url = "assets/code/requirements.py" data-trim data-line-numbers = "1-11"></code >
-							</pre >
+						<div class = "column" style = "position: relative; width: 100%; height: 100%;">
+							<div class = "row r-stretch">
+								<pre data-id = "code-animation">
+									<code data-url = "assets/code/requirements.py" data-trim data-line-numbers = "1-11"></code >
+								</pre >
+							</div >
 						</div >
 
+						<div class = "column">
+							<div class = "row">
+								<div
+										id = "Modules"
+										style = "
+										position: absolute;
+										float: right;
+										top: 0;
+										right: -20%;
+										width: 50%;
+										background-color: rgba(96,95,95,0.84);
+										border: 3px solid #e91d63;
+										border-radius: 10px;
+										padding: 1rem;
+										overflow: auto;
+										z-index: 10;
+										font-color: black;
+										opacity: 0.9;
+										"
+								>
+
+									<h3 style = "text-align: left; font-size: 1.2em;">
+
+									</h3 >
+
+									<p style = "text-align: left; font-size: 0.8em; text-indent: 1em; color: #fff;">
+
+									</p >
+									<hr style = "border: 1px solid #fff; margin: 0.5rem 0;"/>
+							<button style = "font-size: 1.0rem; color: #fff; background-color: #000; border: 1px solid #fff; padding: 0.3rem 1rem; margin: 0.2rem 0; cursor: pointer;" onclick = "moduleHide( );">
+									Hide
+							</button >
+								</div >
+							</div >
+
+						</div >
+						<script >
+							function moduleHide() {
+								document.getElementById( "Modules" ).style.display = "none";
+							}
+						</script >
 					</section >
+					<!------------------------------------------------------------- End Imported Modules ---------------------------------------------------------->
 
 
 
@@ -282,8 +326,8 @@
 										to speed up performance. Then running a validation set off
 										of the model to determine best model for predicting.
 									</p >
-									<hr />
-									<button style = "font-size: 1.0rem; color: #fff; background-color: #000; border: 1px solid #fff; padding: 0.3rem 1rem; margin: 0.2rem 0; cursor: pointer;" onclick = "trainContinue( );">
+									<hr style = "border: 1px solid #fff; margin: 0.5rem 0;"/>
+									<button style = "font-size: 1.0rem; color: #fff; background-color: #000; border: 1px solid #fff; padding: 0.3rem 1rem; margin: 0.2rem 0; cursor: pointer;" onclick = "trainHide( );">
 										Hide
 									</button >
 
@@ -292,7 +336,7 @@
 						</div >
 
 						<script >
-							function trainContinue() {
+							function trainHide() {
 								document.getElementById( "Training" ).style.display = "none";
 							}
 						</script >
@@ -303,17 +347,66 @@
 
 
 					<!---------------------------------------------------------- Predictions Code ---------------------------------------------------------->
-					<section >
+					<section data-auto-animate data-name = "Prediction">
 						<div class = "row">
-							<h2 data-id = "code-title" style = "float: left; top: 0; left: 0;text-decoration: underline; color: #e91d63;font-size: 2em;">Models</h2 >
+							<h2 data-id = "code-title" style = "float: left; top: 0; left: 0;text-decoration: underline; color: #e91d63;font-size: 2em;">Prediction Model</h2 >
 						</div >
-						<pre data-id = "code-animation">
-							<code data-url = "assets/code/models.py" data-trim data-line-numbers = "8|8-21|123"></code >
-						</pre >
-					</section >
-				</section >
-				<!------------------------------------------------------------- End Predictions Code ---------------------------------------------------------->
+						<br />
+						<div class = "column" style = "position: relative; width: 100%; height: 100%;">
+							<div class = "row r-stretch">
+								<pre data-id = "code-animation">
+									<code data-url = "assets/code/models.py" data-trim data-line-numbers = "1|61-74|61-83"></code >
+								</pre >
+							</div >
+						</div >
 
+						<div class = "column">
+							<div class = "row">
+								<!-- Right hanging off-white speech bubble with a pencil drawn design that gives a brief description of what is happening in the code -->
+								<div
+										id = "Prediction"
+										style = "
+										position: absolute;
+										float: right;
+										top: 0;
+										right: -20%;
+										width: 50%;
+										background-color: rgba(96,95,95,0.84);
+										border: 3px solid #e91d63;
+										border-radius: 10px;
+										padding: 1rem;
+										overflow: auto;
+										z-index: 10;
+										font-color: black;
+										opacity: 0.9;
+										"
+								>
+									<h3 style = "text-align: left; font-size: 1.2em;">
+
+									</h3 >
+									<p style = "text-align: left; font-size: 0.8em; text-indent: 1em; color: #fff;">
+
+									</p >
+									<hr style = "border: 1px solid #fff; margin: 0.5rem 0;"/>
+									<button style = "font-size: 1.0rem; color: #fff; background-color: #000; border: 1px solid #fff; padding: 0.3rem 1rem; margin: 0.2rem 0; cursor: pointer;" onclick = "predictionHide( );">
+										Hide
+									</button >
+
+								</div >
+							</div >
+						</div >
+
+						<script >
+							function predictionHide() {
+								document.getElementById( "Prediction" ).style.display = "none";
+							}
+						</script >
+
+					</section >
+					<!------------------------------------------------------------- End Predictions Code ---------------------------------------------------------->
+
+
+				</section >
 
 				<!-- <section data-auto-animate data-name = "Code|Data" > -->
 				<!-- 	<section class = "" > -->
@@ -388,7 +481,7 @@
 				<section >Slide Chapter 2</section >
 
 
-			</div >
+		</div >
 		</div >
 
 
