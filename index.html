@@ -183,44 +183,44 @@
 
 										<div class = "column" style = "max-width: 45%; padding-right: 2rem;">
 												<div class = "row">
-																<h3 style = "float: left; text-align: left; font-size:1.2em;">Preprocessing</h3 >
-														</div >
-														<div class = "row">
-																<ul style = "float: left; text-align: left;font-size: 0.8em;list-style-type: circle;list-style-position: outside;" class = "a">
-																		<li >Gather data, replace emojis, urls, and usernames for generics</li >
-																		<li >Create additional non-sarcastic statements</li >
-																		<li >Combine and Divide Test and Validation Set, load onto Data Loaders</li >
-																		<!-- <li ></li > -->
-																		<!-- <li ></li > -->
-																</ul >
-														</div >
+														<h3 style = "float: left; text-align: left; font-size:1.2em;">Preprocessing</h3 >
 												</div >
+												<div class = "row">
+														<ul style = "float: left; text-align: left;font-size: 0.8em;list-style-type: circle;list-style-position: outside;" class = "a">
+																<li >Gather data, replace emojis, urls, and usernames for generics</li >
+																<li >Create additional non-sarcastic statements</li >
+																<li >Combine and Divide Test and Validation Set, load onto Data Loaders</li >
+																<!-- <li ></li > -->
+																<!-- <li ></li > -->
+														</ul >
+												</div >
+										</div >
 
 										<div class = "column" style = "max-width: 45%;">
 												<div class = "row">
-																<div class = "row">
-																		<h3 style = "float: left; text-align: left;font-size: 1.2em;">Training</h3 >
-																</div >
-
-																<div class = "row">
-																		<ul style = "float: left; text-align: left;font-size: 0.8em;list-style-type: circle;list-style-position: outside;" class = "a">
-																				<li >Trains selected model off of preprocessed dataset</li >
-																				<li >Runs code off of validation sets, and reports scores</li >
-																				<li >Saves the best scores</li >
-																		</ul >
-																</div >
-																<br />
+														<div class = "row">
+																<h3 style = "float: left; text-align: left;font-size: 1.2em;">Training</h3 >
 														</div >
-																<div class = "row">
-																		<h3 style = "float: left; text-align: left;font-size: 1.2em;">Predictions</h3 >
-																</div >
-																<div class = "row">
-																		<ul style = "float: left; text-align: left;font-size: 0.8em;list-style-type: circle;list-style-position: outside;" class = "a">
-																				<li >Uses the previously acquired best model to then run on source</li >
-																		</ul >
-																</div >
 
+														<div class = "row">
+																<ul style = "float: left; text-align: left;font-size: 0.8em;list-style-type: circle;list-style-position: outside;" class = "a">
+																		<li >Trains selected model off of preprocessed dataset</li >
+																		<li >Runs code off of validation sets, and reports scores</li >
+																		<li >Saves the best scores</li >
+																</ul >
+														</div >
+														<br />
 												</div >
+												<div class = "row">
+														<h3 style = "float: left; text-align: left;font-size: 1.2em;">Predictions</h3 >
+												</div >
+												<div class = "row">
+														<ul style = "float: left; text-align: left;font-size: 0.8em;list-style-type: circle;list-style-position: outside;" class = "a">
+																<li >Uses the previously acquired best model to then run on source</li >
+														</ul >
+												</div >
+
+										</div >
 										<!-- </div > -->
 										<!-- </div > -->
 								</section >
@@ -756,14 +756,84 @@
 																		</span >
 																</li >
 																<li >
-																		The best learning-rate found for this model was 3e-6, with 40 epochs, and batch size of 20 off of XLM.
+																		<span style = "">
+																				CUDA proved effective, to a point.
+																				<br />
+																				However, some members of the team were unable to use CUDA, due to complications with their specific GPU.
+																		</span >
 																</li >
 																<li >
-																		The model would skew towards higher predictions for the negative class than the positive class. (Precision and Recall switched.)
+																		<span style = "">
+																				Due to CPU restrictions, we were only able to run an XLM model, which under performed compared to an XLML model.
+																		</span >
 																</li >
 														</ul >
 												</div >
 										</section >
+										<!------------------------------------------------------------- /Complications ---------------------------------------------------------->
+
+
+
+										<!------------------------------------------------------------- Retrospection ---------------------------------------------------------->
+										<section data-name = "Complications">
+												<div class = "row">
+														<h2 style = "float: left; top: 0; left: 0;text-decoration: underline; color: #e91d63;font-size: 2em;">Retrospection</h2 >
+												</div >
+												<br />
+												<br />
+												<div style = "clear: both; word-spacing: 2px;">
+														<h3 >If we could do it all over again.</h3 >
+
+														<ul style = "font-size:1em; width: 100%;" class = "a">
+																<li >
+																		<span style = "">
+																				Team would research more into different methods, given the proper time and resources.
+																		</span >
+																</li >
+																<li >
+																		<span style = "">
+																				Potentially try a ground up approach.
+																		</span >
+																</li >
+																<li >
+																		<span style = "">
+																				Experiment further with different model seeds.
+																		</span >
+																</li >
+														</ul >
+												</div >
+										</section >
+										<!------------------------------------------------------------- /Retrospection ---------------------------------------------------------->
+
+
+
+										<!------------------------------------------------------------- Goodbyes ---------------------------------------------------------->
+										<section data-name = "Complications">
+												<div class = "row">
+														<h2 style = "float: left; top: 0; left: 0;text-decoration: underline; color: #e91d63;font-size: 2em;">Goodbyes</h2 >
+												</div >
+												<br />
+												<div style = "clear: both; word-spacing: 2px;">
+														<ul style = "font-size:1em; width: 100%;" class = "a">
+																<li >
+																		<span style = "">
+																				Team would research more into different methods, given the proper time and resources.
+																		</span >
+																</li >
+																<li >
+																		<span style = "">
+																				Potentially try a ground up approach.
+																		</span >
+																</li >
+																<li >
+																		<span style = "">
+																				Experiment further with different model seeds.
+																		</span >
+																</li >
+														</ul >
+												</div >
+										</section >
+										<!------------------------------------------------------------- /Goodbyes ---------------------------------------------------------->
 
 
 								</section >
