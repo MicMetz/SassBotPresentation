@@ -82,21 +82,6 @@ class ATTClassifier(nn.Module):
         out = self.Classifier(xx)
         return out
 
-# used only for gradient reversal function used in the main transformer layer.
-class GradientReversalLayer(torch.autograd.Function):
-    @staticmethod
-    def forward(ctx, input):
-        return input
-
-
-    @staticmethod
-    def backward(ctx, grad_output):
-        return - grad_output
-
-
-def gradient_reversal_layer(x):
-    return GradientReversalLayer.apply(x)
-
 # class that combines the transfomers with the attention matrix,
 class TransformerLayerG(nn.Module):
     def __init__(self, both=True,
