@@ -135,25 +135,63 @@
 
 
 								<section data-name = "Task">
-										<div class = "row">
-												<h2 style = "float: left; top: 0; left: 0;text-decoration: underline; color: #e91d63;font-size: 2em;">Task Overview</h2 >
-										</div >
-										<!-- <br /> -->
-										<div style = "clear: both; word-spacing: 2px;font-size: 1.2em;">
+										<section data-name = "Overview">
 												<div class = "row">
-														<p style = "float: left; text-align: left;">Create a Model that can predict if a twitter tweet is sarcastic or not.</p >
+														<h2 style = "float: left; top: 0; left: 0;text-decoration: underline; color: #e91d63;font-size: 2em;">Task Overview</h2 >
+												</div >
+												<!-- <br /> -->
+												<div style = "clear: both; word-spacing: 2px;font-size: 1.2em;">
+														<div class = "row">
+																<p style = "float: left; text-align: left;">
+																		We designed a model that can predict if a tweet is sarcastic or not. A tweet is labeled 1 if it is sarcastic, and 0 if not.
+																</p >
+														</div >
+														<br />
+														<br />
+														<div class = "row">
+																<h3 style = "float: left; text-align: left;font-size: 1.2em;">Referencing F1 Score of Sarcasm Class</h3 >
+														</div >
+														<ul style = "float: left; text-align: left;font-size: 1em;list-style-type: circle;list-style-position: outside;" class = "a">
+																<li >Minimum: &#160;&#160; 0.275</li >
+																<li >Threshold: &#160; 0.4</li >
+																<li >Peak: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; 0.605</li >
+														</ul >
+
+												</div >
+										</section >
+
+
+										<section data-name = "Functions">
+												<div class = "row">
+														<h2 style = "float: left; top: 0; left: 0;text-decoration: underline; color: #e91d63;font-size: 2em;">Functions</h2 >
 												</div >
 												<br />
-												<div class = "row">
-														<h3 style = "float: left; text-align: left;font-size: 1.2em;">Referencing F1 Score of Sarcasm Class</h3 >
-												</div >
-												<ul style = "float: left; text-align: left;font-size: 1em;list-style-type: circle;list-style-position: outside;" class = "a">
-														<li >Minimum: &#160;&#160; 0.275</li >
-														<li >Threshold: &#160; 0.4</li >
-														<li >Peak: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; 0.605</li >
-												</ul >
 
-										</div >
+												<div style = "clear: both; word-spacing: 2px;font-size: 1.2em;">
+														<div class = "row">
+																<section >
+
+																		\[\begin{aligned}
+																		Accuracy = \frac{T_P + T_N}{T_P + T_N + F_P + F_N}
+																		\end{aligned}\]
+
+																		\[\begin{aligned}
+																		Precision = \frac{T_P}{T_P + F_P}
+																		\end{aligned}\]
+
+																		\[\begin{aligned}
+																		Recall = \frac{T_P}{T_P + F_N}
+																		\end{aligned}\]
+
+																		\[\begin{aligned}
+																		F_1 = 2 * \frac{Precision * Recall}{Precision + Recall}
+																		\end{aligned}\]
+
+																</section >
+														</div >
+												</div >
+										</section >
+
 								</section >
 
 
@@ -951,6 +989,8 @@
 				<script src = "plugin/highlight/highlight.js"></script >
 				<script src = "plugin/simplemenu/simplemenu.js"></script >
 				<script src = "plugin/chart/Chart.js"></script >
+				<script src = "plugin/math/math.js"></script >
+
 				<script >
           Reveal.addEventListener( 'training', function ( event ) {
             console.log( "Training" );
@@ -1002,7 +1042,7 @@
               scale        : 0.010,
               csspath      : ""
             },
-            plugins           : [ RevealMarkdown, EmbedCode, RevealHighlight, RevealChart, Simplemenu ]
+            plugins           : [ RevealMarkdown, EmbedCode, RevealHighlight, RevealChart, Simplemenu, RevealMath.KaTeX ]
           } );
 				</script >
 
